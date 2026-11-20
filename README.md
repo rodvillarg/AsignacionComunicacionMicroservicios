@@ -1,7 +1,5 @@
 # API Gateway con NGINX - Microservicios gRPC
 
-Jesús Rodrigo Villegas Argüelles - 261186
-
 El cliente manda peticiones HTTP al gateway en el puerto 8080 y NGINX las manda a los microservicios en HTTP/2 usando grpc_pass. Ordenes le pregunta a Productos por gRPC si hay stock antes de crear la orden.
 
 - `/api/productos` -> MSProductos (8081)
