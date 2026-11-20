@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.itson.grpc";
+package producto;
+
+service ProductoService {
+  rpc VerificarYObtener (ProductoRequest) returns (ProductoResponse) {}
+  rpc DescontarStock (StockRequest) returns (ProductoResponse) {}
+}
+
+message ProductoRequest {
+  int64 id = 1;
+}
+
+message StockRequest {
+  int64 id = 1;
+  int32 cantidad = 2;
+}
+
+message ProductoResponse {
+  int64 id = 1;
+  string nombre = 2;
+  double precio = 3;
+  int32 stockDisponible = 4;
+}
